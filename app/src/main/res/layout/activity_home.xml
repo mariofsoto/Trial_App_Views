@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteGradient"
+    tools:context=".HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/yellow"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/svSearchView"
+            app:layout_constraintEnd_toStartOf="@id/svSearchView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/svSearchView"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svSearchView"
+            android:layout_width="300dp"
+            android:layout_height="30sp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/search_view_border"
+            app:defaultQueryHint="@string/search_view_text"
+            app:iconifiedByDefault="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_cart"
+            app:layout_constraintBottom_toBottomOf="@id/svSearchView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/svSearchView"
+            app:layout_constraintTop_toTopOf="@id/svSearchView"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imgShape"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/btn_menu"
+            app:layout_constraintTop_toBottomOf="@id/svSearchView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginStart="6dp"
+            android:text="Enviar a Nombre de Usuario - Dirección >"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgShape"
+            app:layout_constraintTop_toBottomOf="@id/svSearchView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/img_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_gradient_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/border">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:id="@+id/cardView"
+                android:layout_width="364dp"
+                android:layout_height="166dp"
+                app:srcCompat="@drawable/app_image_capture" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/shipping"
+        android:layout_width="343dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_discount">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:src="@drawable/ic_shipping"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/green" />
+
+            <TextView
+                android:id="@+id/initialText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Envío gratis"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgShipping"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="en millones de productos desde $3.500"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/initialText"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_truck"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="18dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shipping">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_trucks"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_motos"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="1dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_truck"
+        app:layout_constraintStart_toEndOf="@id/btn_auto"
+        app:layout_constraintTop_toBottomOf="@id/shipping"
+        app:layout_constraintTop_toTopOf="@id/btn_truck">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_moto"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_auto"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="1dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_motos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shipping"
+        app:layout_constraintTop_toTopOf="@id/btn_truck">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_auto"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_builds"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="1dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_favorites"
+        app:layout_constraintStart_toEndOf="@id/btn_truck"
+        app:layout_constraintTop_toBottomOf="@id/shipping"
+        app:layout_constraintTop_toTopOf="@id/btn_truck">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_builds"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_favorites"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_builds"
+        app:layout_constraintTop_toBottomOf="@id/shipping"
+        app:layout_constraintTop_toTopOf="@id/btn_truck">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_more"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_trucks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camiones"
+        android:textSize="12dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+
+    <TextView
+        android:id="@+id/tv_motos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motos"
+        android:textSize="12dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toStartOf="@id/btn_truck"
+        app:layout_constraintStart_toEndOf="@id/tv_auto"
+        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+
+    <TextView
+        android:id="@+id/tv_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Automóviles"
+        android:textSize="12dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toStartOf="@id/btn_motos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+
+    <TextView
+        android:id="@+id/tv_builds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inmuebles"
+        android:textSize="12dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toStartOf="@id/tv_favorites"
+        app:layout_constraintStart_toEndOf="@id/tv_trucks"
+        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+
+    <TextView
+        android:id="@+id/tv_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver más"
+        android:textSize="12dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_builds"
+        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_trucks">
+
+        <ImageView
+            android:id="@+id/cardView2"
+            android:layout_width="360dp"
+            android:layout_height="100dp"
+            android:background="?attr/selectableItemBackground"
+            app:srcCompat="@drawable/app_image_capture_two" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="18dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_discount">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:textSize="18dp"
+            android:text="Visto recientemente"
+            android:textStyle="bold"
+            android:layout_marginStart="18dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

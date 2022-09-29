@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Tickets</string>
+    <string name="search_view_text">Buscar en Mercado Libre</string>
+</resources>
