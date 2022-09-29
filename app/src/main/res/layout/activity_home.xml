@@ -276,7 +276,8 @@
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+        app:layout_constraintTop_toBottomOf="@id/btn_truck"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_motos"
@@ -288,7 +289,8 @@
         android:textSize="12dp"
         app:layout_constraintEnd_toStartOf="@id/btn_truck"
         app:layout_constraintStart_toEndOf="@id/tv_auto"
-        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+        app:layout_constraintTop_toBottomOf="@id/btn_truck"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_auto"
@@ -300,7 +302,8 @@
         android:textSize="12dp"
         app:layout_constraintEnd_toStartOf="@id/btn_motos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+        app:layout_constraintTop_toBottomOf="@id/btn_truck"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_builds"
@@ -312,7 +315,8 @@
         android:textSize="12dp"
         app:layout_constraintEnd_toStartOf="@id/tv_favorites"
         app:layout_constraintStart_toEndOf="@id/tv_trucks"
-        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+        app:layout_constraintTop_toBottomOf="@id/btn_truck"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_favorites"
@@ -324,7 +328,8 @@
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tv_builds"
-        app:layout_constraintTop_toBottomOf="@id/btn_truck" />
+        app:layout_constraintTop_toBottomOf="@id/btn_truck"
+        tools:ignore="TextContrastCheck" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_discount"
@@ -409,7 +414,7 @@
                 app:layout_constraintStart_toEndOf="@+id/iv_product"
                 app:layout_constraintTop_toTopOf="@id/border2"
                 android:textSize="14dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginStart="16dp"/>
 
             <TextView
@@ -420,12 +425,24 @@
                 app:layout_constraintStart_toEndOf="@+id/iv_product"
                 app:layout_constraintTop_toBottomOf="@id/tv_productTitle"
                 android:textSize="20dp"
+                android:layout_marginTop="6dp"
                 android:textStyle="bold"
                 android:layout_marginStart="16dp"/>
 
+            <TextView
+                android:id="@+id/tv_freeShipping"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Envío gratis"
+                android:textColor="@color/green"
+                app:layout_constraintStart_toEndOf="@+id/iv_product"
+                app:layout_constraintTop_toBottomOf="@id/tv_productPrice"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="16dp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.cardview.widget.CardView>
 
