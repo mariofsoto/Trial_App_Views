@@ -7,80 +7,9 @@
     android:background="@color/whiteGradient"
     tools:context=".HomeActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/topBar"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="@color/yellow"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btn_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:src="@drawable/ic_menu"
-            app:layout_constraintBottom_toBottomOf="@+id/svSearchView"
-            app:layout_constraintEnd_toStartOf="@id/svSearchView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/svSearchView"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/svSearchView"
-            android:layout_width="300dp"
-            android:layout_height="30sp"
-            android:layout_marginBottom="45dp"
-            android:background="@drawable/search_view_border"
-            app:defaultQueryHint="@string/search_view_text"
-            app:iconifiedByDefault="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:src="@drawable/ic_cart"
-            app:layout_constraintBottom_toBottomOf="@id/svSearchView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/svSearchView"
-            app:layout_constraintTop_toTopOf="@id/svSearchView"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <ImageView
-            android:id="@+id/imgShape"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:src="@drawable/ic_location"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/btn_menu"
-            app:layout_constraintTop_toBottomOf="@id/svSearchView" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:layout_marginStart="6dp"
-            android:text="Enviar a Nombre de Usuario - Dirección >"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imgShape"
-            app:layout_constraintTop_toBottomOf="@id/svSearchView" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
-        android:id="@+id/border"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topBar">
-
-    </LinearLayout>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main"/>
 
     <LinearLayout
         android:id="@+id/img_discount"
@@ -91,7 +20,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/border">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
