@@ -5,4 +5,12 @@
     <string name="user_location"><![CDATA[Enviar a Nombre de Usuario - Dirección >]]></string>
     <string name="free_shipping">Envío gratis</string>
     <string name="number_products_discount">en millones de productos desde $3.500</string>
+    <string name="products_truck">Camiones</string>
+    <string name="products_moto">Motos</string>
+    <string name="product_auto">Automóviles</string>
+    <string name="view_more">Ver más</string>
+    <string name="product_real_state">Inmuebles</string>
+    <string name="recent_view">Visto recientemente</string>
+    <string name="product_tittle">Zapatilla Mujer adidas Run Falcon 2.0 Original Negro</string>
+    <string name="product_price">$ 13.999</string>
 </resources>

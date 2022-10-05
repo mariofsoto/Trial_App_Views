@@ -110,12 +110,13 @@
             android:layout_gravity="center"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_trucks"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
+            android:contentDescription="@string/todo" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/btn_motos"
+        android:id="@+id/btn_motorcycle"
         android:layout_width="56dp"
         android:layout_height="56dp"
         app:cardCornerRadius="50dp"
@@ -142,7 +143,7 @@
         android:layout_height="56dp"
         app:cardCornerRadius="50dp"
         app:cardElevation="1dp"
-        app:layout_constraintEnd_toStartOf="@id/btn_motos"
+        app:layout_constraintEnd_toStartOf="@id/btn_motorcycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/shipping"
         app:layout_constraintTop_toTopOf="@id/btn_truck">
@@ -153,7 +154,8 @@
             android:layout_gravity="center"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_auto"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
+            android:contentDescription="@string/todo" />
 
     </androidx.cardview.widget.CardView>
 
@@ -174,7 +176,8 @@
             android:layout_gravity="center"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_builds"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
+            android:contentDescription="@string/todo" />
 
     </androidx.cardview.widget.CardView>
 
@@ -195,7 +198,8 @@
             android:layout_gravity="center"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_more"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
+            android:contentDescription="@string/todo" />
 
     </androidx.cardview.widget.CardView>
 
@@ -204,22 +208,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="Camiones"
+        android:text="@string/products_truck"
         android:textColor="@color/gray"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_truck"
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/tv_motos"
+        android:id="@+id/tv_motorcycle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="Motos"
+        android:text="@string/products_moto"
         android:textColor="@color/gray"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@id/btn_truck"
         app:layout_constraintStart_toEndOf="@id/tv_auto"
         app:layout_constraintTop_toBottomOf="@id/btn_truck"
@@ -230,10 +234,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="Automóviles"
+        android:text="@string/product_auto"
         android:textColor="@color/gray"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toStartOf="@id/btn_motos"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/btn_motorcycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_truck"
         tools:ignore="TextContrastCheck,TextContrastCheck" />
@@ -243,9 +247,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="Inmuebles"
+        android:text="@string/product_real_state"
         android:textColor="@color/gray"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@id/tv_favorites"
         app:layout_constraintStart_toEndOf="@id/tv_trucks"
         app:layout_constraintTop_toBottomOf="@id/btn_truck"
@@ -256,9 +260,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="Ver más"
+        android:text="@string/view_more"
         android:textColor="@color/gray"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tv_builds"
         app:layout_constraintTop_toBottomOf="@id/btn_truck"
@@ -282,7 +286,8 @@
             android:layout_width="360dp"
             android:layout_height="100dp"
             android:background="?attr/selectableItemBackground"
-            app:srcCompat="@drawable/app_image_capture_two" />
+            app:srcCompat="@drawable/app_image_capture_two"
+            android:contentDescription="@string/todo" />
 
     </androidx.cardview.widget.CardView>
 
@@ -309,9 +314,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="16dp"
-                android:text="Visto recientemente"
+                android:text="@string/recent_view"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -337,16 +342,17 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/border2"
-                app:srcCompat="@drawable/app_image_product" />
+                app:srcCompat="@drawable/app_image_product"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/tv_productTitle"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:text="Zapatilla Mujer adidas Run Falcon 2.0 Original Negro"
+                android:text="@string/product_tittle"
                 app:layout_constraintStart_toEndOf="@+id/iv_product"
                 app:layout_constraintTop_toTopOf="@id/border2"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:layout_marginTop="12dp"
                 android:layout_marginStart="16dp"/>
 
@@ -354,10 +360,10 @@
                 android:id="@+id/tv_productPrice"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:text="$ 13.999"
+                android:text="@string/product_price"
                 app:layout_constraintStart_toEndOf="@+id/iv_product"
                 app:layout_constraintTop_toBottomOf="@id/tv_productTitle"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:layout_marginTop="6dp"
                 android:textStyle="bold"
                 android:layout_marginStart="16dp"/>
@@ -366,14 +372,15 @@
                 android:id="@+id/tv_freeShipping"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:text="Envío gratis"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/free_shipping"
                 android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="normal"
                 app:layout_constraintStart_toEndOf="@+id/iv_product"
                 app:layout_constraintTop_toBottomOf="@id/tv_productPrice"
-                android:textSize="14dp"
-                android:textStyle="normal"
-                android:layout_marginTop="6dp"
-                android:layout_marginStart="16dp"/>
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
