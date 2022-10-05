@@ -26,13 +26,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            app:cardCornerRadius="12dp">
+            app:cardCornerRadius="12dp"
+            tools:ignore="ExtraText">
 
             <ImageView
                 android:id="@+id/cardView"
                 android:layout_width="364dp"
                 android:layout_height="166dp"
-                app:srcCompat="@drawable/app_image_capture" />
+                app:srcCompat="@drawable/app_image_capture"
+                android:contentDescription="@string/todo" />
 
         </androidx.cardview.widget.CardView>
 
@@ -62,14 +64,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/green" />
+                app:tint="@color/green"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/initialText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
-                android:text="Envío gratis"
+                android:text="@string/free_shipping"
                 android:textColor="@color/green"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -81,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text="en millones de productos desde $3.500"
+                android:text="@string/number_products_discount"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -128,7 +131,8 @@
             android:layout_gravity="center"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_moto"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
+            android:contentDescription="@string/todo" />
 
     </androidx.cardview.widget.CardView>
 

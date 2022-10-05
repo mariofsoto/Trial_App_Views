@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">My Tickets</string>
     <string name="search_view_text">Buscar en Mercado Libre</string>
+    <string name="todo">TODO</string>
+    <string name="user_location"><![CDATA[Enviar a Nombre de Usuario - Dirección >]]></string>
+    <string name="free_shipping">Envío gratis</string>
+    <string name="number_products_discount">en millones de productos desde $3.500</string>
 </resources>
