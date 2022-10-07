@@ -28,11 +28,10 @@
 
             <ImageView
                 android:id="@+id/imgShapeTwo"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
                 android:contentDescription="@string/todo"
                 android:layout_marginStart="16dp"
-                android:layout_marginBottom="2dp"
                 android:src="@drawable/ic_location"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +41,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="18dp"
                 android:layout_marginStart="6dp"
-                android:layout_marginBottom="5dp"
                 android:text="@string/user_location"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -239,6 +237,7 @@
         app:layout_constraintTop_toTopOf="@id/btn_truck">
 
         <ImageButton
+            android:id="@+id/btn_favoritesImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
