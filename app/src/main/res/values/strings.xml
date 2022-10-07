@@ -16,4 +16,6 @@
     <string name="filters_view">Ver filtros</string>
     <string name="filter_string">Filtrar(1)</string>
     <string name="results_string">+2000 resultados</string>
+    <string name="favorite_content_description">añadir a favoritos</string>
+    <string name="product_content_description">imagen del producto</string>
 </resources>
