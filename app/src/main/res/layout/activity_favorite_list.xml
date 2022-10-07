@@ -18,17 +18,17 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
-        tools:text="+2000 resultados" />
+        android:text="@string/results_string"/>
 
     <TextView
         android:id="@+id/tvFilter"
         android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/filter_string"
         android:layout_marginStart="16dp"
         app:layout_constraintEnd_toStartOf="@+id/ivFilter"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        tools:text="Filtrar(1)" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <ImageView
         android:id="@+id/ivFilter"
@@ -38,6 +38,16 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintTop_toTopOf="@id/tvFilter"
         app:layout_constraintBottom_toBottomOf="@id/tvFilter"
-        />
+        android:contentDescription="@string/filters_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavoriteList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResults"
+        tools:listitem="@layout/favorite_list_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
