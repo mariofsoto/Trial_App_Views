@@ -1,4 +1,4 @@
-package com.example.mytickets
+package com.example.mytickets.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

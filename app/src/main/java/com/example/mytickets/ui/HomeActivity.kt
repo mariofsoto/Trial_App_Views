@@ -1,6 +1,5 @@
-package com.example.mytickets
+package com.example.mytickets.ui
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,8 +15,15 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnFavoritesImg.setOnClickListener {
-            val intent = Intent(this, FavoriteListActivity::class.java)
-            startActivity(intent)
+            //val intent = Intent(this, FavoriteListActivity::class.java)
+            //startActivity(intent)
+            val intent2 = Intent(this, FavoriteDetailsActivity::class.java)
+            startActivity(intent2)
+        }
+
+        binding.btnAuto.setOnClickListener {
+            val intent2 = Intent(this, FavoriteDetailsActivity::class.java)
+            startActivity(intent2)
         }
     }
 
