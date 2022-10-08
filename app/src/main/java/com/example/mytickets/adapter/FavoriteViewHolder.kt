@@ -2,6 +2,7 @@ package com.example.mytickets.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.mytickets.data.Favorite
 import com.example.mytickets.databinding.FavoriteListItemBinding
 import com.squareup.picasso.Picasso
@@ -14,7 +15,8 @@ class FavoriteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         binding.tvProductTitle.text = favoriteModel.productTitle
         binding.tvProductPrice.text = favoriteModel.productPrice
         binding.tvProductLocation.text = favoriteModel.productLocation
-        Picasso.get().load(favoriteModel.productImg).into(binding.ivProductImg)
+        //Picasso.get().load(favoriteModel.productImg).into(binding.ivProductImg)
+        Glide.with(binding.ivProductImg.context).load(favoriteModel.productImg).into(binding.ivProductImg)
     }
 
 }

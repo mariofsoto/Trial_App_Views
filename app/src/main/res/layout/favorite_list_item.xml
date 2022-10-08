@@ -25,7 +25,7 @@
                 android:background="@drawable/ic_background_favorite"
                 android:contentDescription="@string/favorite_content_description"
                 android:elevation="8dp"
-                android:src="@drawable/ic_favorite_hearth"
+                android:src="@drawable/ic_favorite_hearth_selected"
                 app:layout_constraintEnd_toEndOf="@id/cvRealEstatePicture"
                 app:layout_constraintTop_toTopOf="@id/cvRealEstatePicture"
                 app:tint="@color/blue"
